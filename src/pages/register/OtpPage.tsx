@@ -48,7 +48,7 @@ export const OtpPage = () => {
       <div className="absolute top-0 left-0 w-full h-[35vh] overflow-hidden">
         <div className="absolute inset-0 bg-[#44ACFF]" />
 
-{/*Logo*/}
+        {/*Logo*/}
         <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
        <img 
           src="/LogoBE.svg" 

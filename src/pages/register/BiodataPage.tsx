@@ -28,38 +28,37 @@ export const BiodataPage = () => {
 
     console.log({ nama, tglLahir, gender });
 
-    navigate("/home");
+    navigate("/createaccountpage");
   };
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden font-poppins">
+      
 
-      {/* HEADER */}
-      <div className="absolute top-0 left-0 w-full h-[35vh] overflow-hidden">
-        <div className="absolute inset-0 bg-[#44ACFF]" />
+     {/* HEADER */}
+<div className={`absolute top-0 left-0 w-full h-[35vh] overflow-hidden transition-all duration-300 ${openPicker ? "blur-sm" : "blur-0"}`}>
+  <div className="absolute inset-0 bg-[#44ACFF]" />
 
-          {/*Logo*/}
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
-       <img 
-          src="/LogoBE.svg" 
-         alt="Logo" 
-         className="h-12 md:h-14"
-         />
-      </div>
+  {/* Logo ikut di dalam div yang kena blur */}
+  <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
+    <img 
+      src="/LogoBE.svg" 
+      alt="Logo" 
+      className="h-12 md:h-14"
+    />
+  </div>
 
+  <button 
+    onClick={() => navigate(-1)}
+    className="absolute top-6 left-6 z-20 text-white p-2 rounded-full"
+  >
+    <ArrowLeft size={24} />
+  </button>
 
-        <button 
-          onClick={() => navigate(-1)}
-          className="absolute top-6 left-6 z-20 text-white p-2 rounded-full"
-        >
-          <ArrowLeft size={24} />
-        </button>
-
-        <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
-          <path fill="#fff" d="M0,224L60,202C120,181,240,139,360,122C480,107,600,117,720,144C840,171,960,213,1080,202C1200,192,1320,128,1440,96V320H0Z"/>
-        </svg>
-      </div>
-
+  <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
+    <path fill="#fff" d="M0,224L60,202C120,181,240,139,360,122C480,107,600,117,720,144C840,171,960,213,1080,202C1200,192,1320,128,1440,96V320H0Z"/>
+  </svg>
+</div>
       {/* CONTENT */}
       <div className="relative z-10 flex flex-col px-8 pt-[32vh]">
 
@@ -112,9 +111,8 @@ export const BiodataPage = () => {
     </span>
   </div>
 </div>
-
 {openPicker && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-md px-4">
 
     {/* CARD */}
     <div className="w-full max-w-md bg-white rounded-2xl shadow-xl relative">
