@@ -84,7 +84,7 @@ export const WelcomePage = () => {
           <div className="text-center mb-10">
             <h1 className="text-3xl font-black text-white">Selamat Datang !</h1>
             <p className="text-white/90 mt-2">
-              Temukan layanan Antar dan jual beli jajanan lokal dengan mudah di Barito Edge``
+              Temukan layanan Antar dan jual beli jajanan lokal dengan mudah di Barito Edge`
             </p>
           </div>
 

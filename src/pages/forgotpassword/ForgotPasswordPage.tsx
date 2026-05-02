@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Mail, Phone, ArrowLeft } from 'lucide-react';
 
-export const RegisterPage = () => {
+export const ForgotPasswordPage = () => {
   const navigate = useNavigate();
   const [identifier, setIdentifier] = useState('');
 
@@ -16,8 +16,7 @@ export const RegisterPage = () => {
 
     console.log("Data:", identifier);
 
-    // nanti arahkan ke OTP
-    navigate('/otpregister');
+    navigate('/otpforgotpw');
   };
 
   return (
@@ -55,9 +54,9 @@ export const RegisterPage = () => {
 
         {/* TITLE */}
         <div className="mb-10">
-          <h1 className="text-4xl font-extrabold text-[#333]">Sign up</h1>
+          <h1 className="text-3xl font-extrabold text-[#333]">Lupa Password</h1>
           <p className="text-gray-500 mt-2 text-sm">
-            Masukkan email atau nomor telepon untuk mendaftar
+            Masukkan email atau nomor telepon untuk mengatur ulang password
           </p>
           <div className="w-16 h-1 bg-[#44ACFF] mt-3 rounded-full" />
         </div>
@@ -93,17 +92,6 @@ export const RegisterPage = () => {
             Lanjut
           </button>
         </form>
-
-        {/* LOGIN LINK */}
-        <div className="text-center mt-10 text-gray-500 text-sm">
-          Sudah punya akun?{" "}
-          <span 
-            onClick={() => navigate('/login')}
-            className="text-[#44ACFF] font-semibold cursor-pointer"
-          >
-            Masuk
-          </span>
-        </div>
 
       </div>
     </div>

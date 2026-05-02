@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
-export const OtpPage = () => {
+export const OtpRegister = () => {
   const navigate = useNavigate();
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputsRef = useRef<HTMLInputElement[]>([]);
